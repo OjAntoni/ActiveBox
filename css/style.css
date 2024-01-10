@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 0 20px;
+}
+
+.wrapper-header {
+  background-image: url(../img/header-img.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper-header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(37, 43, 73, 0.8);
+}
+
+.header {
+  margin-bottom: 131px;
+}
+
+.header__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #babbc5;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 183.862px;
+  height: 25.746px;
+}
+
+.header__logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header__nav {
+  display: flex;
+  margin: 36px 0;
+}
+
+.nav__item {
+  width: 134px;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15.26px;
+  padding: 4.87px 0;
+  text-transform: uppercase;
+}
+
+.nav__item::after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: calc(100% + 34px);
+  left: 0;
+  border-bottom: 3px solid #babbc5;
+}
+
+.nav__item:hover::after {
+  display: block;
+}
+
+.header__menu{
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 984px;
+  }
+
+  .nav__item {
+    width: 112px;
+    flex-shrink: 1;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 780px){
+    .header__nav {
+        display: none;
+    }
+
+    .header__menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 55px;
+        max-width: 56px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .header__logo{
+        max-width: 103.472px;
+        max-height: 14.352px;;
+    }
+}
