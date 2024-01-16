@@ -2,41 +2,25 @@
 @use "vars.scss";
 @use "mixins.scss";
 
-.wrapper-header {
-  background-image: url(../img/header-img.jpg);
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(37, 43, 73, 0.8);
-  }
-}
-
 .header {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 2;
+
   &__container {
-    position: fixed;
-    width: 100%;
-    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
 
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
-      left: 20px;
+      margin: 0 auto;
       border-bottom: 1px solid #babbc5;
+      max-width: 1130px;
       width: calc(100% - 40px);
 
       @media only screen and (max-width: 767px) {
@@ -69,7 +53,7 @@
       align-items: center;
       justify-content: center;
       max-width: 55px;
-      max-width: 56px;
+      max-height: 56px;
       background-color: transparent;
       border: none;
     }
@@ -130,6 +114,21 @@
 
 .banner {
   padding: 230px 0 120px;
+  background-image: url(../img/header-img.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(37, 43, 73, 0.8);
+  }
 
   @media only screen and (max-width: 1024px) {
     padding: 257px 0 126px;
