@@ -1,0 +1,217 @@
+@use "reset.scss";
+@use "vars.scss";
+@use "mixins.scss";
+
+.header {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 2;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      margin: 0 auto;
+      border-bottom: 1px solid #babbc5;
+      max-width: 1130px;
+      width: calc(100% - 40px);
+
+      @media only screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 183.862px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media only screen and (max-width: 767px) {
+      max-width: 103.472px;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @media only screen and (max-width: 767px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 55px;
+      max-height: 56px;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+
+  &__item {
+    min-width: 134px;
+    padding: 36px 0;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    @include mixins.text("Raleway", 13px, 700, 15.26px);
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      border-bottom: 3px solid #babbc5;
+    }
+
+    &:hover::after {
+      display: block;
+    }
+
+    &:active {
+      color: vars.$btn-hover-color;
+
+      &::after {
+        border-color: vars.$btn-hover-color;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      min-width: 112px;
+      flex-shrink: 1;
+      font-size: 12px;
+    }
+
+    @media only screen and (max-width: 785px) {
+      min-width: 100px;
+    }
+  }
+}
+
+.banner {
+  padding: 230px 0 120px;
+  background-image: url(../img/header-img.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(37, 43, 73, 0.8);
+  }
+
+  @media only screen and (max-width: 1024px) {
+    padding: 257px 0 126px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 106px 0 52px;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    color: #fff;
+    text-align: center;
+    @include mixins.text("Raleway", 64px, 900, 75.14px);
+    text-transform: uppercase;
+    margin-bottom: 31.43px;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 48px;
+      line-height: 56.35px;
+      margin-bottom: 61.86px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 36px;
+      line-height: 42.26px;
+      margin-bottom: 32.71px;
+    }
+  }
+
+  &__text {
+    color: #fff;
+    text-align: center;
+    @include mixins.text("Raleway", 24px, 400, 28.18px);
+    max-width: 1010px;
+    margin: 0 auto 79.57px;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 18px;
+      line-height: 21.13px;
+      margin-bottom: 89.14px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 16.44px;
+      margin-bottom: 49.29px;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  background-color: vars.$btn-color;
+  max-width: 370px;
+  width: 100%;
+  padding: 25.91px 0;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  @include mixins.text("Raleway", 24px, 900, 28.18px);
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: vars.$btn-hover-color;
+  }
+
+  &:active {
+    background-color: vars.$btn-hover-color;
+    box-shadow: 4px 4px 30px 0px #ff4343;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    max-width: 314px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    max-width: 100%;
+    padding: 15.91px 0;
+  }
+}
