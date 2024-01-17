@@ -167,7 +167,8 @@
     color: #fff;
     text-align: center;
     @include mixins.text("Raleway", 24px, 400, 28.18px);
-    margin-bottom: 79.57px;
+    max-width: 1010px;
+    margin: 0 auto 79.57px;
 
     @media only screen and (max-width: 1024px) {
       font-size: 18px;
