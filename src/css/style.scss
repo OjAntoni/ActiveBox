@@ -119,6 +119,7 @@
   background-size: cover;
   position: relative;
   z-index: 1;
+  margin-bottom: 116px;
 
   &::after {
     content: "";
@@ -132,10 +133,12 @@
 
   @media only screen and (max-width: 1024px) {
     padding: 257px 0 126px;
+    margin-bottom: 78px;
   }
 
   @media only screen and (max-width: 767px) {
     padding: 106px 0 52px;
+    margin-bottom: 40px;
   }
 
   &__container {
@@ -213,5 +216,91 @@
   @media only screen and (max-width: 767px) {
     max-width: 100%;
     padding: 15.91px 0;
+  }
+}
+
+.features {
+  margin-bottom: 134px;
+
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 80.11px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 34.85px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 87.57px;
+    margin-bottom: 117px;
+
+    @media only screen and (max-width: 1024px) {
+      gap: 49.84px 20px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+      row-gap: 41.46px;
+    }
+  }
+}
+
+.feature {
+  &__wrapper-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0 auto 50px;
+
+    @media only screen and (max-width: 1024px) {
+      max-width: 85px;
+      max-height: 85px;
+      margin: 0 auto 43.49px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      margin: 0 auto 41.72px;
+      max-width: 75px;
+      max-height: 75px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    color: #2d3033;
+    text-align: center;
+    @include mixins.text("Raleway", 24px, 900, 28.18px);
+    text-transform: uppercase;
+    margin-bottom: 45.43px;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 18px;
+      line-height: 21.13px;
+      margin-bottom: 28.43px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    color: #6c7279;
+    text-align: center;
+    @include mixins.text("Raleway", 18px, 400, 21.13px);
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 14px;
+      line-height: 16.44px;
+    }
   }
 }
