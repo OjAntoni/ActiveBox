@@ -8,20 +8,40 @@
   transform: translateX(-50%);
   width: 100%;
   z-index: 2;
+  transition: all 0.4s linear;
+
+  &.scrolled {
+    background-color: rgba(37, 43, 73, 0.8);
+
+    .header__container::after {
+      width: 0;
+      left: 50%;
+    }
+  }
+
+  &.open {
+    background-color: rgba(37, 43, 73, 0.8);
+    height: 100vh;
+  }
 
   &__container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    row-gap: 28px;
 
     &::after {
       content: "";
       position: absolute;
+      left: 20px;
       bottom: 0;
       margin: 0 auto;
       border-bottom: 1px solid #babbc5;
       max-width: 1130px;
       width: calc(100% - 40px);
+      transition: all 0.4s linear;
 
       @media only screen and (max-width: 767px) {
         display: none;
@@ -48,6 +68,10 @@
   &__menu {
     display: none;
 
+    svg {
+      pointer-events: none;
+    }
+
     @media only screen and (max-width: 767px) {
       display: flex;
       align-items: center;
@@ -56,6 +80,27 @@
       max-height: 56px;
       background-color: transparent;
       border: none;
+    }
+  }
+}
+
+.pop-up-menu {
+  display: none;
+
+  &.open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+
+    .pop-up-menu__item {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      @include mixins.text("Raleway", 13px, 700, 15.26px);
+      text-transform: uppercase;
+      padding: 23.87px 0;
     }
   }
 }
