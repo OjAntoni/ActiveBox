@@ -353,8 +353,8 @@
   margin-bottom: 114px;
 
   &__container {
-    width: 100vw;
-    max-width: 1510px;
+    width: 100%;
+    // max-width: 1510px;
     margin: 0 auto;
     padding: 0 1px;
     display: grid;
