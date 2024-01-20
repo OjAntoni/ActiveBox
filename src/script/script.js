@@ -30,14 +30,16 @@ function toggleMenu() {
   scrollingElement.classList.toggle("open");
 }
 
-// Добавляем слушатель события для каждого пункта меню
-var menuItems = document.querySelectorAll("pop-up-menu__item");
-menuItems.forEach(function (item) {
-  item.addEventListener("click", closeMenu);
-});
-
 // Функция для закрытия меню
 function closeMenu() {
   menu.classList.remove("open");
   scrollingElement.classList.remove("open");
 }
+
+// Добавляем слушатель события для каждого пункта меню
+var menuItems = document.querySelectorAll(".pop-up-menu__item");
+menuItems.forEach(function (item) {
+  item.addEventListener("click", closeMenu);
+});
+
+
