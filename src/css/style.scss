@@ -352,6 +352,14 @@
 .design {
   margin-bottom: 114px;
 
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 78.22px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 35px;
+  }
+
   &__container {
     width: 100%;
     // max-width: 1510px;
@@ -360,6 +368,10 @@
     display: grid;
     gap: 2px 2px;
     grid-template-columns: repeat(4, 1fr);
+
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .project {
@@ -368,10 +380,18 @@
     flex-direction: column;
     justify-content: center;
     row-gap: 42px;
-    aspect-ratio: 1;  
+    aspect-ratio: 1;
 
-    &::after{
-      content: '';
+    @media only screen and (max-width: 1024px) {
+      row-gap: 22.81px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      row-gap: 9px;
+    }
+
+    &::after {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -382,12 +402,13 @@
       transition: opacity 0.4s linear;
     }
 
-    &:hover{
-      .project__title, .project__description{
+    &:hover {
+      .project__title,
+      .project__description {
         opacity: 1;
       }
 
-      &::after{
+      &::after {
         opacity: 1;
       }
     }
@@ -406,20 +427,30 @@
       opacity: 0;
       text-align: center;
       z-index: 1;
-      @include mixins.text("Raleway", 24px, 900, 24px); 
+      @include mixins.text("Raleway", 24px, 900, 24px);
       text-transform: uppercase;
       color: #fff;
       transition: opacity 0.4s linear;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 21.13px;
+      }
     }
 
     &__description {
       opacity: 0;
       text-align: center;
       z-index: 1;
-      color: #FFF;
-      @include mixins.text("Raleway", 18px, 400, 21.13px); 
+      color: #fff;
+      @include mixins.text("Raleway", 18px, 400, 21.13px);
       color: #fff;
       transition: opacity 0.4s linear;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 14px;
+        line-height: 16.44px;
+      }
     }
   }
 }
