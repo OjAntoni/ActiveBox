@@ -146,19 +146,20 @@
     text-align: center;
     @include mixins.text("Raleway", 13px, 700, 15.26px);
     text-transform: uppercase;
+    transition: color 0.2s linear;
 
     &::after {
       content: "";
       position: absolute;
-      display: none;
       width: 100%;
       bottom: 0;
       left: 0;
-      border-bottom: 3px solid #babbc5;
+      border-bottom: 3px solid transparent;
+      transition: border-bottom-color 0.2s linear;
     }
 
     &:hover::after {
-      display: block;
+      border-bottom-color: #babbc5;
     }
 
     &:active {
@@ -268,6 +269,7 @@
   text-align: center;
   @include mixins.text("Raleway", 24px, 900, 28.18px);
   text-transform: uppercase;
+  transition: background-color 0.2s linear, box-shadow 0.2s linear;
 
   &:hover {
     background-color: vars.$btn-hover-color;
