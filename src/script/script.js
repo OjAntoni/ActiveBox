@@ -28,12 +28,14 @@ menuButton.addEventListener("click", toggleMenu);
 function toggleMenu() {
   menu.classList.toggle("open");
   scrollingElement.classList.toggle("open");
+  menuButton.classList.toggle("open");
 }
 
 // Функция для закрытия меню
 function closeMenu() {
   menu.classList.remove("open");
   scrollingElement.classList.remove("open");
+  menuButton.classList.remove("open");
 }
 
 // Добавляем слушатель события для каждого пункта меню
