@@ -44,4 +44,11 @@ menuItems.forEach(function (item) {
   item.addEventListener("click", closeMenu);
 });
 
+var swiper = new Swiper(".testimonials", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
+
 

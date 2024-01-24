@@ -486,3 +486,288 @@
     }
   }
 }
+
+.testimonials {
+  padding-bottom: 45px;
+  margin-bottom: 114px;
+
+  @media only screen and (max-width: 1024px) {
+    padding-bottom: 41px;
+    margin-bottom: 77.51px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 33px;
+    margin-bottom: 50px;
+  }
+
+  &__slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .slide {
+    &__img {
+      background-image: url(../img/testimonials.jpg);
+      background-position: center;
+      background-size: cover;
+
+      @media only screen and (max-width: 767px) {
+        min-height: 212px;
+      }
+    }
+
+    &__description {
+      background-color: #5c3249;
+      padding: 116px 170px 116px 129px;
+
+      @media only screen and (max-width: 1024px) {
+        padding: 47px 104px 110px 88px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        padding: 20px 25px 95px 20px;
+      }
+    }
+
+    &__text {
+      color: #fff;
+      @include mixins.text("Cardo", 36px, 400, 48.74px);
+      font-style: italic;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+    }
+
+    &__author {
+      color: #fff;
+      @include mixins.text("Raleway", 13px, 700, 15.26px);
+      text-transform: uppercase;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #7e5d6f;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 1;
+
+  @media only screen and (max-width: 1024px) {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #7e5d6f;
+}
+
+.team {
+  margin-bottom: 114px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 49.4px;
+    }
+  }
+}
+
+.member {
+  &__img-wrapper {
+    overflow: hidden;
+    margin-bottom: 33px;
+
+    @media only screen and (max-width: 767px) {
+      aspect-ratio: 280 / 227;
+    }
+
+    img {
+      width: 100%; /* Ensures the image fills the width */
+      height: 100%; /* Ensures the image fills the height */
+      object-fit: cover; /* Resize the image to cover the div */
+      object-position: center; /* Adjust this as needed */
+    }
+  }
+
+  &__name {
+    color: #2d3033;
+    @include mixins.text("Raleway", 24px, 770, 24px);
+    text-transform: capitalize;
+    margin-bottom: 8px;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 18px;
+    }
+  }
+
+  &__position {
+    color: #ff4343;
+    @include mixins.text("Raleway", 18px, 400, 21.13px);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    color: #6c7279;
+    @include mixins.text("Raleway", 18px, 400, 21.13px);
+    margin-bottom: 37.86px;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.download {
+  margin-bottom: 114px;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 78px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 45px;
+  }
+
+  &__header {
+    color: #000;
+    text-align: center;
+    @include mixins.text("Raleway", 30px, 500, 35.22px);
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    color: #000;
+    text-align: center;
+    @include mixins.text("Raleway", 18px, 700, 21.13px);
+    text-transform: uppercase;
+    margin-bottom: 47.41px;
+  }
+}
+
+.footer {
+  background-color: #353c65;
+  padding-top: 71px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    margin-bottom: 67px;
+
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 70px;
+    }
+  }
+
+  .location {
+    &__header {
+      color: #fff;
+      text-align: center;
+      @include mixins.text("Raleway", 18px, 700, 21.13px);
+      text-transform: uppercase;
+      margin-bottom: 30px;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__address {
+      color: #fff;
+      text-align: center;
+      @include mixins.text("Raleway", 18px, 400, 21.13px);
+      text-transform: capitalize;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .social {
+    &__header {
+      color: #fff;
+      text-align: center;
+      @include mixins.text("Raleway", 18px, 700, 21.13px);
+      margin-bottom: 48.46px;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+        margin-bottom: 36px;
+      }
+    }
+
+    &__links {
+      display: flex;
+      column-gap: 27px;
+      justify-content: center;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .about {
+    &__header {
+      color: #fff;
+      text-align: center;
+      @include mixins.text("Raleway", 18px, 700, 21.13px);
+      text-transform: uppercase;
+      margin-bottom: 29px;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+        margin-bottom: 19px;
+      }
+    }
+
+    &__text {
+      color: #fff;
+      text-align: center;
+      @include mixins.text("Raleway", 18px, 400, 21.13px);
+
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .credits {
+    background-color: #2c3154;
+    padding: 23.86px 0 24.14px;
+    
+    &__info {
+      max-width: 370px;
+      width: 100%;
+      margin: 0 auto;
+      color: #808080;
+      text-align: center;
+      @include mixins.text("Raleway", 18px, 400, 21.13px);
+      text-transform: capitalize;
+
+      span {
+        color: #fff;
+      }
+    }
+  }
+}
